@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:10.3-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: ci-generator
+    volumes:
+      - /home/knazzari/projects/soyouweb/symfony-rest-psql-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  php:
+    build: ./docker/php
+    volumes:
+      - .:/code
+    environment:
+      DATABASE_USER: root
+      DATABASE_PASS: root
+      DATABASE_NAME: ci-generator
+      PHP_IDE_CONFIG: "serverName=docker-server"
+    links:
+      - db
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/code
+      - ./docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
+    links:
+      - php
