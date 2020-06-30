@@ -8,8 +8,6 @@ services:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
       POSTGRES_DB: ci-generator
-    volumes:
-      - /home/knazzari/projects/soyouweb/symfony-rest-psql-data:/var/lib/postgresql/data
     restart: unless-stopped
 
   php:
