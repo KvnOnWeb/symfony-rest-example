@@ -9,9 +9,3 @@ fos_rest:
   format_listener:
     rules:
       - { path: '^/', priorities: ['json'], fallback_format: 'json' }
-
-# app/config/config.yml
-framework:
-  # ...
-  serializer:
-    enabled: true

@@ -17,6 +17,18 @@
             "./src/DataFixtures/AppFixtures.php"
         ]
     },
+    "friendsofsymfony/rest-bundle": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.2",
+            "ref": "cad41ef93d6150067ae2bb3c7fd729492dff6f0a"
+        },
+        "files": [
+            "config/packages/fos_rest.yaml"
+        ]
+    },
     "gedmo/doctrine-extensions": {
         "version": "v2.4.41"
     },
@@ -53,7 +65,16 @@
     "symfony/property-access": {
         "version": "v4.4.10"
     },
+    "symfony/security-core": {
+        "version": "v4.4.10"
+    },
     "symfony/serializer": {
         "version": "v4.4.10"
+    },
+    "willdurand/jsonp-callback-validator": {
+        "version": "v1.1.0"
+    },
+    "willdurand/negotiation": {
+        "version": "v2.3.1"
     }
 }
