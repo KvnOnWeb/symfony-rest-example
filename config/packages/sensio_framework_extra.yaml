@@ -1,5 +1,5 @@
 sensio_framework_extra:
     router:
         annotations: false
-    # app/config/config.yml
+    view: { annotations: true }
     request: { converters: true }

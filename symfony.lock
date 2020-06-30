@@ -59,8 +59,20 @@
             "./config/packages/stof_doctrine_extensions.yaml"
         ]
     },
+    "symfony/form": {
+        "version": "v4.4.10"
+    },
     "symfony/inflector": {
         "version": "v4.4.10"
+    },
+    "symfony/intl": {
+        "version": "v4.4.10"
+    },
+    "symfony/options-resolver": {
+        "version": "v4.4.10"
+    },
+    "symfony/polyfill-intl-icu": {
+        "version": "v1.17.1"
     },
     "symfony/property-access": {
         "version": "v4.4.10"
@@ -70,6 +82,25 @@
     },
     "symfony/serializer": {
         "version": "v4.4.10"
+    },
+    "symfony/templating": {
+        "version": "v4.4.10"
+    },
+    "symfony/translation-contracts": {
+        "version": "v2.1.2"
+    },
+    "symfony/validator": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "d902da3e4952f18d3bf05aab29512eb61cabd869"
+        },
+        "files": [
+            "config/packages/test/validator.yaml",
+            "config/packages/validator.yaml"
+        ]
     },
     "willdurand/jsonp-callback-validator": {
         "version": "v1.1.0"

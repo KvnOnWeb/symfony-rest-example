@@ -31,3 +31,4 @@ services:
       - ./docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
     links:
       - php
+      - db
