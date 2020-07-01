@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
- * Class UserController
+ * Class UserController.
  */
 class UserController extends AbstractFOSRestController
 {
@@ -31,17 +31,20 @@ class UserController extends AbstractFOSRestController
     /**
      * @Rest\Get(path = "/users")
      * @Rest\View(statusCode=Response::HTTP_OK)
+     *
      * @return User[]
      */
     public function getAll()
     {
         $this->denyAccessUnlessGranted(['ROLE_TOTO', 'ROLE_USER']);
+
         return $this->userRepository->findAll();
     }
 
     /**
      * @Rest\Get(path = "/users/{id}")
      * @Rest\View(statusCode=Response::HTTP_OK)
+     *
      * @param User $user
      * @return User|null
      */
@@ -60,6 +63,7 @@ class UserController extends AbstractFOSRestController
      *
      * @param Request $request
      * @return User|FormInterface
+     *
      * @throws ORMException
      */
     public function post(Request $request)

@@ -59,7 +59,8 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "quality": "php-cs-fixer fix ./src  --show-progress=dots --verbose --dry-run"
     },
     "conflict": {
         "symfony/symfony": "*"
