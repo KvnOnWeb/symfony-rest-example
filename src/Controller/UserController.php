@@ -36,8 +36,6 @@ class UserController extends AbstractFOSRestController
      */
     public function getAll()
     {
-        $this->denyAccessUnlessGranted(['ROLE_TOTO', 'ROLE_USER']);
-
         return $this->userRepository->findAll();
     }
 
