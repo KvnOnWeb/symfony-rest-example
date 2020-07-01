@@ -7,9 +7,16 @@ use App\Entity\Product;
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class AppFixtures extends Fixture
 {
+    private $passwordEncoder;
+
+    public function __construct(UserPasswordEncoderInterface $passwordEncoder)
+    {
+         $this->passwordEncoder = $passwordEncoder;
+    }
 
     /**
      * @param ObjectManager $manager
@@ -17,11 +24,13 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $john = new User();
-        $john->setUsername('john')->setPassword('123');
+        $john->setUsername('john')
+            ->setPassword($this->passwordEncoder->encodePassword($john, '123'));
         $manager->persist($john);
 
         $henri = new User();
-        $henri->setUsername('henri')->setPassword('123');
+        $henri->setUsername('henri')
+            ->setPassword($this->passwordEncoder->encodePassword($henri, '123'));
         $manager->persist($henri);
 
         $tomates = new Product();

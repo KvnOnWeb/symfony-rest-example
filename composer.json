@@ -6,6 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "friendsofsymfony/rest-bundle": "^3.0",
+        "lexik/jwt-authentication-bundle": "^2.8",
         "sensio/framework-extra-bundle": "^5.5",
         "stof/doctrine-extensions-bundle": "^1.4",
         "symfony/console": "4.4.*",
@@ -21,6 +22,7 @@
         "symfony/yaml": "4.4.*"
     },
     "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "^3.3",
         "symfony/maker-bundle": "^1.11"
     },
     "config": {

@@ -53,3 +53,7 @@ config/packages/dev/app-dev.key
 ###< friendsofphp/php-cs-fixer ###
 cghooks.lock
 
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###
