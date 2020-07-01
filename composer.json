@@ -60,7 +60,7 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "quality": "php-cs-fixer fix ./src  --show-progress=dots --verbose --dry-run"
+        "quality": "php-cs-fixer fix ./src  --show-progress=dots --verbose"
     },
     "conflict": {
         "symfony/symfony": "*"
